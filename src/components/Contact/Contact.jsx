@@ -6,6 +6,7 @@ const Contact = () => {
             <input type="text"/><br/>
             <label htmlFor="">Comment</label>
             <textarea placeholder="Write your comment here..."></textarea>
+            <button type="submit" className="button">Send</button>
         </form>
     )
 }

@@ -34,7 +34,7 @@ const Login = ({loginUser, loginError}) => {
                 <input type="password" name="password" id="pass" onChange={changeInput} value={formData.password}></input>
             </label>
             <div>
-                <button className="login_button" type="submit">Log In</button>
+                <button className="button" type="submit">Log In</button>
             </div>
             {loginError ? <div style={{color: "red"}}>{loginError}</div> : null}
         </form>
