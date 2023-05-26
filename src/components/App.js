@@ -1,13 +1,14 @@
 import "../styles/App.css";
 import Home from "./Home/Home";
 import Contact from "./Contact/Contact";
-import { Link, Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import BeerList from "./BeerList/BeerList";
 import Navbar from "./NavBar/Navbar";
 import Profile from "./Profile/Profile";
 import Login from "./Login/Login";
 import NotFound from "./NotFoundPage/NotFound";
+import { color } from "./Context/themeContext";
 
 
 const userList = [
@@ -54,6 +55,11 @@ function App() {
   const [user, setUser] = useState(null);
   const [loginError, setLoginError] = useState("");
   const [beers, setBeers] = useState([]);
+  const [theme, setTheme] = useState(false)
+
+  const handleClick = (ev) => {
+    setTheme(ev.target.checked)
+  }
   
   useEffect(()=>{
     fetch("https://api.punkapi.com/v2/beers")
@@ -84,8 +90,13 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Navbar user={user} logoutUser={logoutUser} />
+    <div className={theme ? "white" : "black"}>
+      <form className="theme" action="">
+        <label>Day/Dark mode</label>
+        <input type='checkbox' name="colorTheme" onChange={handleClick} checked={theme}/>
+      </form>
+      <color.Provider value={theme}>
+      <Navbar user={user} logoutUser={logoutUser}/>
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -109,6 +120,7 @@ function App() {
         />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </color.Provider>
     </div>
   );
 }

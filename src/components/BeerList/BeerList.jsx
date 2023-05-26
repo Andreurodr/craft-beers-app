@@ -11,7 +11,7 @@ const BeerList = ({beers}) => {
     }
 
     return(
-        <section>
+        <section className="section">
         {renderBeers()}
         </section>
     )
