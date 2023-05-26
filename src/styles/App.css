@@ -1,0 +1,93 @@
+.App {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #282c34;
+  letter-spacing: 1px;
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+  gap: 25px;
+}
+
+.img_home {
+  border-radius: 50px;
+}
+
+.logo {
+  width: 50px;
+  margin-top: -12px;
+}
+
+.beer_card {
+  width: 500px;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+}
+
+.beer_img {
+  width: 100px;
+}
+
+a {
+  color: #282c34;
+  text-decoration: none;
+}
+
+.logout {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: -20px;
+  border: none;
+  background-color: white;
+  font-size: calc(10px + 2vmin);
+  color: #282c34;
+}
+
+input {
+  margin: 10px;
+}
+
+textarea {
+  margin: 10px;
+  width: 400px;
+  height: 100px;
+  resize: none;
+}
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.user_img {
+  border-radius: 120px;
+  margin-left: 60px;
+}
+
+.login_button {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  background-color: white;
+  margin-left: 125px;
+  font-weight: bold;
+}
